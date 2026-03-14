@@ -1,0 +1,325 @@
+/* Page background */
+
+body{
+  margin:0;
+  font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+  background:#0f172a;
+  color:#e2e8f0;
+}
+
+
+/* Main container */
+
+.App{
+  text-align:center;
+  padding:30px;
+}
+
+
+/* Title */
+
+h1{
+  font-size:36px;
+  color:#f1f5f9;
+  margin-bottom:20px;
+}
+
+
+/* Controls */
+
+.controls{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+
+/* Inputs */
+
+input,select{
+  padding:10px 15px;
+  border-radius:8px;
+  border:1px solid #334155;
+  font-size:14px;
+  outline:none;
+  background:#1e293b;
+  color:#e2e8f0;
+  transition:0.2s;
+}
+
+input:focus,select:focus{
+  border-color:#22c55e;
+  box-shadow:0 0 6px rgba(34,197,94,0.4);
+}
+
+
+/* Recipe Grid */
+
+.recipe-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+
+
+/* Recipe Card */
+
+.card{
+  background:#1e293b;
+  border-radius:12px;
+  padding:20px;
+  text-align:left;
+  box-shadow:0 6px 20px rgba(0,0,0,0.4);
+  transition:0.25s;
+
+  height:220px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.6);
+}
+
+
+/* Title */
+
+.card h3{
+  margin-top:0;
+  color:#f8fafc;
+}
+
+
+/* Text */
+
+.card p{
+  font-size:14px;
+  color:#cbd5f5;
+  margin:6px 0;
+}
+
+
+/* Recipe link button */
+
+.card a{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 12px;
+  background:#22c55e;
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.2s;
+}
+
+.card a:hover{
+  background:#16a34a;
+}
+
+
+/* Rating stars */
+
+.star{
+  font-size:18px;
+  color:#475569;
+}
+
+.star.filled{
+  color:#facc15;
+}
+
+
+/* Pagination */
+
+.pagination{
+  margin-top:30px;
+}
+
+.pagination button{
+  padding:8px 14px;
+  margin:5px;
+  border:none;
+  background:#22c55e;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.pagination button:hover{
+  background:#16a34a;
+}
+
+.pagination button:disabled{
+  background:#475569;
+}
+
+.pagination span{
+  margin:0 10px;
+}
+
+
+/* Modal */
+
+.modal-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.modal-container{
+  background:#1e293b;
+  width:900px;
+  max-height:90vh;
+  overflow-y:auto;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.7);
+  color:#e2e8f0;
+}
+
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.close-btn{
+  border:none;
+  background:none;
+  font-size:20px;
+  color:white;
+  cursor:pointer;
+}
+
+.recipe-description{
+  margin:15px 0;
+  color:#cbd5f5;
+}
+
+.recipe-meta{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+
+/* Modal grid */
+
+.modal-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.ingredients li{
+  padding:5px 0;
+}
+
+.instructions li{
+  margin-bottom:10px;
+}
+
+
+/* Nutrients */
+
+.nutrients{
+  margin-top:30px;
+}
+
+.nutrient-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.nutrient-card{
+  background:#334155;
+  padding:15px;
+  border-radius:8px;
+  text-align:center;
+}
+
+.nutrient-card span{
+  display:block;
+  font-size:13px;
+  color:#94a3b8;
+}
+
+.nutrient-card b{
+  font-size:16px;
+}
+
+
+/* Footer */
+
+.modal-footer{
+  margin-top:30px;
+  text-align:center;
+}
+
+.recipe-link{
+  background:#f97316;
+  color:white;
+  padding:10px 20px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+
+  height:240px;                 /* fixed height */
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+/* Title */
+.card h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+/* Text */
+.card p{
+  font-size:14px;
+  margin:3px 0;
+}
+
+/* Ingredients limit */
+.ingredients-text{
+  display:-webkit-box;
+  -webkit-line-clamp:2;          /* show only 2 lines */
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* Stars spacing */
+.rating{
+  margin:6px 0;
+}
+
+/* Total time always bottom */
+.total-time{
+  margin-top:auto;
+  font-weight:500;
+}
